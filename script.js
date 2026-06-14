@@ -3,7 +3,7 @@ document.getElementById('bookingForm').addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const submitBtn = document.getElementById('submitBtn');
-    submitBtn.innerText = "Generazione biglietto...";
+    submitBtn.innerText = "Generazione prenotazione...";
     submitBtn.disabled = true;
 
     // 2. Raccoglie i dati inseriti dall'utente nel Form
@@ -36,7 +36,7 @@ document.getElementById('bookingForm').addEventListener('submit', async (e) => {
         const url = window.URL.createObjectURL(pdfBlob);
         const a = document.createElement('a');
         a.href = url;
-        a.download = `Biglietto_${datiPrenotazione.nome}_${datiPrenotazione.cognome}.pdf`;
+        a.download = `Prenotazione_${datiPrenotazione.nome}_${datiPrenotazione.cognome}.pdf`;
         document.body.appendChild(a);
         a.click();
         
